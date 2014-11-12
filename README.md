@@ -1,3 +1,7 @@
+Pester 3.0 has been released!  To see a list of changes in this version, refer to the [What's New in Pester 3.0?](https://github.com/pester/Pester/wiki/What's-New-in-Pester-3.0%3F) Wiki page.
+
+---
+
 Pester
 =======
 Pester provides a framework for **running Unit Tests to execute and validate PowerShell commands inside of PowerShell**. Pester follows a file naming convention for naming tests to be discovered by pester at test time and a simple set of functions that expose a Testing DSL for isolating, running, evaluating and reporting the results of Powershell commands.
@@ -79,9 +83,11 @@ This will start a powershell session, import the Pester Module and call invoke p
 
 Some further reading and resources:
 -----------------------------------
-
-* [powershell-bdd-testing-pester-screencast](http://scottmuc.com/blog/development/powershell-bdd-testing-pester-screencast/)
-* [pester-bdd-for-the-system-administrator](http://scottmuc.com/blog/development/pester-bdd-for-the-system-administrator/)
+* [Getting started with Pester](http://www.powershellmagazine.com/2014/03/12/get-started-with-pester-powershell-unit-testing-framework/)
+* [Testing your scripts with Pester, Assertions and more](http://www.powershellmagazine.com/2014/03/27/testing-your-powershell-scripts-with-pester-assertions-and-more/)
 * [The Wiki](https://github.com/pester/Pester/wiki)
 * [Google Discussion Group](https://groups.google.com/forum/?fromgroups#!forum/pester)
 * `C:\PS> Import-Module ./pester.psm1; Get-Help about_pester`
+* Note: The following two links were for Pester v1.0.  The syntax shown, particularly for performing Assertions with Should, is no longer applicable to later versions of Pester.
+    * [powershell-bdd-testing-pester-screencast](http://scottmuc.com/blog/development/powershell-bdd-testing-pester-screencast/)
+    * [pester-bdd-for-the-system-administrator](http://scottmuc.com/blog/development/pester-bdd-for-the-system-administrator/)
