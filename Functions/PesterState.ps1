@@ -237,7 +237,7 @@ function Write-Context
     )
     process {
         $margin = "   "
-        Microsoft.PowerShell.Utility\Write-Host ${margin}Context $Name -ForegroundColor Magenta
+        Write-Host ${margin}Context $Name -ForegroundColor Magenta
     }
 }
 
@@ -258,21 +258,21 @@ function Write-PesterResult
         switch ($TestResult.Result)
         {
             Passed {
-                "$margin[+] $output $humanTime" | Microsoft.PowerShell.Utility\Write-Host -ForegroundColor DarkGreen
+                "$margin[+] $output $humanTime" | Write-Host -ForegroundColor DarkGreen
                 break
             }
             Failed {
-                "$margin[-] $output $humanTime" | Microsoft.PowerShell.Utility\Write-Host -ForegroundColor red
-                Microsoft.PowerShell.Utility\Write-Host -ForegroundColor red $($TestResult.failureMessage -replace '(?m)^',$error_margin)
-                Microsoft.PowerShell.Utility\Write-Host -ForegroundColor red $($TestResult.stackTrace -replace '(?m)^',$error_margin)
+                "$margin[-] $output $humanTime" | Write-Host -ForegroundColor red
+                Write-Host -ForegroundColor red $($TestResult.failureMessage -replace '(?m)^',$error_margin)
+                Write-Host -ForegroundColor red $($TestResult.stackTrace -replace '(?m)^',$error_margin)
                 break
             }
             Skipped {
-                "$margin[!] $output $humanTime" | Microsoft.PowerShell.Utility\Write-Host -ForegroundColor Gray
+                "$margin[!] $output $humanTime" | Write-Host -ForegroundColor Gray
                 break
             }
             Pending {
-                "$margin[?] $output $humanTime" | Microsoft.PowerShell.Utility\Write-Host -ForegroundColor Gray
+                "$margin[?] $output $humanTime" | Write-Host -ForegroundColor Gray
                 break
             }
         }

@@ -121,6 +121,7 @@ about_pester
         [Alias('Tags')]
         [string]$Tag,
         [switch]$PassThru,
+        [switch]$QUiet,
 
         [object[]] $CodeCoverage = @(),
         [Switch]$Strict,
@@ -132,6 +133,10 @@ about_pester
         [ValidateSet('LegacyNUnitXml', 'NUnitXml')]
         [string] $OutputFormat
     )
+
+    if ($QUiet) {
+        function global:Write-Host {}
+    }
 
     if ($PSBoundParameters.ContainsKey('OutputXml'))
     {
